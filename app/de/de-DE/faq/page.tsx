@@ -1,5 +1,19 @@
-import "./faqPage.scss";
+import type { Metadata } from "next";
+import { FAQ } from "./components/faq";
+import "./page.scss";
 
-const FaqPage = async () => <div>FAQ-Page</div>;
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: "FAQ Page",
+  };
+}
+
+const FaqPage = () => {
+  return (
+    <section>
+      <FAQ />
+    </section>
+  );
+};
 
 export default FaqPage;

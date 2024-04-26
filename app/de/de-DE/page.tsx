@@ -1,33 +1,18 @@
-import "./globals.scss";
+import type { Metadata } from "next";
+import { FAQ } from "./faq/components/faq";
 
-import Image from "next/image";
+export const metadata: Metadata = {
+  title: "Localized Home Page",
+};
 
-export default function Home() {
+const HomePage = () => {
   return (
     <main>
-      <div>
-        <p>
-          Get started by editing&nbsp;
-          <code>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+      <div>Home Page</div>
+      {/* Note: this component is imported from the faq module and causes the (s)css issue */}
+      <FAQ />
     </main>
   );
-}
+};
+
+export default HomePage;
