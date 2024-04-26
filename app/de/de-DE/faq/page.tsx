@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { FAQ } from "./components/faq";
+import { FAQ } from "../../../components/faq/faq";
 import "./page.scss";
 
 export async function generateMetadata(): Promise<Metadata> {

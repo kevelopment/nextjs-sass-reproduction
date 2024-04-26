@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { FAQ } from "./faq/components/faq";
+import { FAQ } from "../../components/faq/faq";
+import "./page.scss";
 
 export const metadata: Metadata = {
   title: "Localized Home Page",
